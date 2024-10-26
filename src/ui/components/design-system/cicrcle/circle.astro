@@ -1,0 +1,25 @@
+---
+type CircleProps = {
+  colorBackground: string;
+};
+
+const { colorBackground } = Astro.props as CircleProps;
+---
+
+<div 
+  class="circle" 
+  style={{ backgroundColor: colorBackground }}
+>
+</div>
+
+<style>
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #017143;
+    clip-path: circle(600px at right 800px);
+  }
+</style>
