@@ -1,0 +1,41 @@
+---
+import FaFacebook from './icons/FaFacebook.astro';
+import FaInstagram from './icons/FaInstagram.astro';
+import FaTwitter from './icons/FaTwitter.astro';
+
+export type IconSocialProps = {
+  name: 'facebook' | 'instagram' | 'twitter';
+  size: string;
+  color: string;
+  link: string;
+}
+
+const { 
+  name, 
+  size = "30px", 
+  color = "#FDFD06", 
+  link,
+} = Astro.props as IconSocialProps;
+
+const icons = {
+  facebook: FaFacebook,
+  instagram: FaInstagram,
+  twitter: FaTwitter,
+};
+
+const IconComponent = icons[name];
+--- 
+
+<a 
+  href={link} 
+  target="_blank" 
+  style="outline: none; text-decoration: none;"
+>
+  {
+    IconComponent && 
+    <IconComponent 
+      size={size} 
+      color={color} 
+    />
+  }
+</a>

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 // import Card from '../components/Card.astro';
 import Logo from '../ui/components/design-system/logo/logo.astro';
+import Icon from '../ui/components/design-system/icon-social/icon-social.astro';
 ---
 
 <Layout title="Landing page">
@@ -9,6 +10,21 @@ import Logo from '../ui/components/design-system/logo/logo.astro';
 		size="100px" 
 		altText="Logo App"
 		src="/images/logo.png" 
+	/>
+
+	<Icon 
+		name="facebook"  
+		link="https://www.facebook.com"
+	/>
+
+	<Icon 
+		name="instagram"  
+		link="https://www.instagram.com"
+	/>
+
+	<Icon 
+		name="twitter" 
+		link="https://www.twitter.com"
 	/>
 
 </Layout>
