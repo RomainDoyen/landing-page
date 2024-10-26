@@ -1,0 +1,40 @@
+---
+import Typography from "../design-system/typography/typography.astro";
+import Container from "../container/container.astro";
+import Button from "../design-system/button/button.astro";
+import Image from "../design-system/image/image.astro";
+---
+
+<Container customClass="header">
+  <Container customClass="txt-box">
+    <Typography
+      variant="h2"
+    >
+      It's not just Coffee
+    </Typography>
+    <Typography
+      variant="h2"
+    >
+      It's 
+    </Typography>
+    <Typography>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </Typography>
+    <Button 
+      variant="primary" 
+      size="medium" 
+      link="/#"
+    >
+      Learn More
+    </Button>
+  </Container>
+  <Container customClass="img-box">
+    <Image 
+      altText="Coffee"
+      width="340px"
+      src="/images/img1.png" 
+    />
+  </Container>
+</Container>
