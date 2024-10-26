@@ -1,0 +1,40 @@
+---
+type NavigationProps = {
+  title?: string;
+  links: Array<{ name: string; url: string }>;
+};
+
+const { title, links } = Astro.props as NavigationProps;
+---
+
+<nav class="navigation">
+  <h1>{title}</h1>
+  <ul>
+    {links.map((link: { url: string | URL | null | undefined; name: unknown; }) => (
+      <li>
+        <a href={link.url}>{link.name}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: #f8f8f8; */
+  }
+
+  .navigation ul {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+  }
+
+  .navigation a {
+    text-decoration: none;
+    color: #333;
+  }
+</style>

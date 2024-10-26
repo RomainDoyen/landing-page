@@ -5,6 +5,7 @@ import Image from '../ui/components/design-system/image/image.astro';
 import Icon from '../ui/components/design-system/icon-social/icon-social.astro';
 import Button from '../ui/components/design-system/button/button.astro';
 import Typography from '../ui/components/design-system/typography/typography.astro';
+import Navigation from '../ui/components/design-system/navigation/navigation.astro';
 ---
 
 <Layout title="Landing page">
@@ -45,13 +46,22 @@ import Typography from '../ui/components/design-system/typography/typography.ast
 		Click me 2
 	</Button>
 
-	<Typography variant="h" color="secondary">
+	<Typography variant="h2" color="secondary">
 		Hello World
 	</Typography>
 
 	<Typography variant="p">
 		Hello World
 	</Typography>
+
+	<Navigation 
+		links={[
+			{ name: 'Home', url: '/' },
+			{ name: 'Menu', url: '/menu' },
+			{ name: 'What\'s New', url: '/whatsnew' },
+			{ name: 'Contact', url: '/contact' },
+		]}
+	/>
 </Layout>
 
 <style>
