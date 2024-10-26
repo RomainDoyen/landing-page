@@ -1,0 +1,43 @@
+---
+export type TypographyProps = {
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
+  color?: "default" | "primary" | "secondary" | "tertiary";
+};
+
+const { variant = "p", color = "default" } = Astro.props;
+---
+
+{variant === 'h1' && <h1 color={color}><slot /></h1>}
+{variant === 'h2' && <h2 color={color}><slot /></h2>}
+{variant === 'h3' && <h3 color={color}><slot /></h3>}
+{variant === 'h4' && <h4 color={color}><slot /></h4>}
+{variant === 'h5' && <h5 color={color}><slot /></h5>}
+{variant === 'h6' && <h6 color={color}><slot /></h6>}
+{variant === 'p' && <p color={color}><slot /></p>}
+{variant === 'span' && <span color={color}><slot /></span>}
+
+<style>
+  [color="default"] {
+    color: #000;
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  [color="primary"] {
+    color: #04814d;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  [color="secondary"] {
+    color: #017143;
+    font-size: 1.6em;
+    font-weight: 900;
+  }
+
+  [color="tertiary"] {
+    color: #017143;
+    font-size: 1.6em;
+    font-weight: 900;
+  }
+</style>
