@@ -1,0 +1,37 @@
+---
+
+export type LogoProps = {
+  size?: string;
+  link?: string;
+  altText?: string;
+  src: string;
+  className?: string;
+}
+
+const { 
+  size = "50px",  
+  link, 
+  altText = "Logo",
+  src,
+  className
+} = Astro.props;
+
+---
+
+{link ? (
+  <a href={link} target="_blank" class={className}>
+    <img 
+      src={src} 
+      alt={altText} 
+      style={{ width: size, height: size }} 
+      class={className}
+    />
+  </a>
+) : (
+  <img 
+    src={src} 
+    alt={altText} 
+    style={{ width: size, height: size }} 
+    class={className}
+  />
+)}
