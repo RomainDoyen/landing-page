@@ -1,0 +1,22 @@
+---
+import Image from "../design-system/image/image.astro"
+import Navigation from "../design-system/navigation/navigation.astro"
+import Container from "../container/container.astro"
+---
+
+<Container customClass="header">
+  <Image 
+		width="100px"
+		height="100px" 
+		altText="Logo App"
+		src="/images/logo.png" 
+	/>
+  <Navigation 
+		links={[
+			{ name: 'Home', url: '/' },
+			{ name: 'Menu', url: '/menu' },
+			{ name: 'What\'s New', url: '/whatsnew' },
+			{ name: 'Contact', url: '/contact' },
+		]}
+	/>
+</Container>
