@@ -1,0 +1,80 @@
+---
+export type ButtonProps = {
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary';
+  size?: 'small' | 'medium' | 'large';
+  link?: string;
+};
+
+const { 
+  type = 
+  'button', 
+  variant = 
+  'primary', 
+  size = 'medium',
+  link = '/#' 
+} = Astro.props as ButtonProps;
+
+---
+
+{link ? (
+  <a 
+    href={link} 
+    class="button link" 
+    data-variant={variant} 
+    data-size={size}
+  >
+    <slot />
+  </a>
+) : (
+  <button 
+    class="button" 
+    type={type} 
+    data-variant={variant} 
+    data-size={size}
+  >
+    <slot />
+  </button>
+)}
+
+<style>
+  .button.link {
+    text-decoration: none;
+  }
+
+  .button {
+    background-color: #017143;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .button:hover {
+    background-color: #055a36;
+  }
+
+  .button:active {
+    background-color: #117d50;
+  }
+
+  .button[data-variant="secondary"] {
+    background-color: #fff;
+    color: #017143;
+    border: 1px solid #017143;
+  }
+
+  .button[data-size="small"] {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .button[data-size="large"] {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+  }
+</style>
