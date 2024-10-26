@@ -1,0 +1,34 @@
+---
+type ContainerProps = {
+  customClass: "social-ul" | "thumb-ul";
+};
+
+const { customClass } = Astro.props as ContainerProps;
+---
+
+<div class={customClass}>
+  <slot />
+</div>
+
+<style>
+  .social-ul {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .thumb-ul {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 35px;
+  }
+</style>

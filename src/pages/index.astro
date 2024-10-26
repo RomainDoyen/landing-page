@@ -7,11 +7,13 @@ import Button from '../ui/components/design-system/button/button.astro';
 import Typography from '../ui/components/design-system/typography/typography.astro';
 import Navigation from '../ui/components/design-system/navigation/navigation.astro';
 import Circle from '../ui/components/design-system/cicrcle/circle.astro';
+import Container from '../ui/components/container/container.astro';
 ---
 
 <Layout title="Landing page">
 	<Image 
-		size="100px" 
+		width="100px"
+		height="100px" 
 		altText="Logo App"
 		src="/images/logo.png" 
 	/>
@@ -65,6 +67,41 @@ import Circle from '../ui/components/design-system/cicrcle/circle.astro';
 	/>
 
 	<Circle colorBackground="#017143" />
+
+	<Container customClass="social-ul">
+		<Icon 
+			name="facebook"  
+			link="https://www.facebook.com"
+		/>
+
+		<Icon 
+			name="instagram"  
+			link="https://www.instagram.com"
+		/>
+
+		<Icon 
+			name="twitter" 
+			link="https://www.twitter.com"
+		/>
+	</Container>
+
+	<Container customClass="thumb-ul">
+		<Image 
+			altText="Logo App"
+			width="60px"
+			src="/images/thumb1.png" 
+		/>
+		<Image 
+			altText="Logo App"
+			width="60px"
+			src="/images/thumb2.png" 
+		/>
+		<Image 
+			altText="Logo App"
+			width="60px"
+			src="/images/thumb3.png" 
+		/>
+	</Container>
 </Layout>
 
 <style>
