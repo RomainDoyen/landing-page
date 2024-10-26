@@ -1,6 +1,6 @@
 ---
 type ContainerProps = {
-  customClass: "social-ul" | "thumb-ul" | "header" | "txt-box" | "img-box";
+  customClass: "social-ul" | "thumb-ul" | "header" | "txt-box" | "img-box" | "container";
 };
 
 const { customClass } = Astro.props as ContainerProps;
@@ -36,8 +36,8 @@ const { customClass } = Astro.props as ContainerProps;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   .txt-box {

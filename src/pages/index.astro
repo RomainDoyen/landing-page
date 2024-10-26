@@ -9,49 +9,48 @@ import Section from '../ui/components/section/section.astro';
 ---
 
 <Layout title="Landing page">
+
+	<Container customClass="container">
+		<Circle colorBackground="#017143" />
+
+		<Header />
+
+		<Section />
+
+		<Container customClass="social-ul">
+			<Icon 
+				name="facebook"  
+				link="https://www.facebook.com"
+			/>
+
+			<Icon 
+				name="instagram"  
+				link="https://www.instagram.com"
+			/>
+
+			<Icon 
+				name="twitter" 
+				link="https://www.twitter.com"
+			/>
+		</Container>
+
+		<Container customClass="thumb-ul">
+			<Image 
+				altText="Logo App"
+				width="60px"
+				src="/images/thumb1.png" 
+			/>
+			<Image 
+				altText="Logo App"
+				width="60px"
+				src="/images/thumb2.png" 
+			/>
+			<Image 
+				altText="Logo App"
+				width="60px"
+				src="/images/thumb3.png" 
+			/>
+		</Container>
+	</Container>
 	
-	<Circle colorBackground="#017143" />
-
-	<Header />
-
-	<Section />
-
-	<Container customClass="social-ul">
-		<Icon 
-			name="facebook"  
-			link="https://www.facebook.com"
-		/>
-
-		<Icon 
-			name="instagram"  
-			link="https://www.instagram.com"
-		/>
-
-		<Icon 
-			name="twitter" 
-			link="https://www.twitter.com"
-		/>
-	</Container>
-
-	<Container customClass="thumb-ul">
-		<Image 
-			altText="Logo App"
-			width="60px"
-			src="/images/thumb1.png" 
-		/>
-		<Image 
-			altText="Logo App"
-			width="60px"
-			src="/images/thumb2.png" 
-		/>
-		<Image 
-			altText="Logo App"
-			width="60px"
-			src="/images/thumb3.png" 
-		/>
-	</Container>
 </Layout>
-
-<style>
-	
-</style>
