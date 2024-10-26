@@ -3,20 +3,31 @@ import Typography from "../design-system/typography/typography.astro";
 import Container from "../container/container.astro";
 import Button from "../design-system/button/button.astro";
 import Image from "../design-system/image/image.astro";
+import { isBlock } from "typescript";
 ---
 
 <Container customClass="header">
   <Container customClass="txt-box">
     <Typography
       variant="h2"
+      color="text-box"
     >
       It's not just Coffee
     </Typography>
-    <Typography
-      variant="h2"
-    >
-      It's 
-    </Typography>
+    <Container style="display: flex; gap: 10px">
+      <Typography
+        variant="h2"
+        color="text-box"
+      >
+        It's
+      </Typography>
+      <Typography
+        variant="h2"
+        color="tertiary"
+      >
+        Starbucks
+      </Typography>
+    </Container>
     <Typography>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

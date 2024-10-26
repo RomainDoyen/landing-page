@@ -1,12 +1,13 @@
 ---
 type ContainerProps = {
   customClass: "social-ul" | "thumb-ul" | "header" | "txt-box" | "img-box" | "container";
+  style?: string;
 };
 
-const { customClass } = Astro.props as ContainerProps;
+const { customClass, style } = Astro.props as ContainerProps;
 ---
 
-<div class={customClass}>
+<div class={customClass} style={style}>
   <slot />
 </div>
 

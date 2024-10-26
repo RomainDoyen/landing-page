@@ -1,7 +1,7 @@
 ---
 export type TypographyProps = {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
-  color?: "default" | "primary" | "secondary" | "tertiary";
+  color?: "default" | "primary" | "secondary" | "tertiary" | "text-box";
 };
 
 const { variant = "p", color = "default" } = Astro.props;
@@ -37,7 +37,15 @@ const { variant = "p", color = "default" } = Astro.props;
 
   [color="tertiary"] {
     color: #017143;
-    font-size: 1.6em;
+    font-size: 2.5em;
+    line-height: 1.4em;
     font-weight: 900;
+  }
+
+  [color="text-box"] {
+    color: #333;
+    font-size: 40px;
+    line-height: 1.4em;
+    font-weight: 500;
   }
 </style>
